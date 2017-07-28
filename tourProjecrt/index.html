@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>tour-diary</title>
+		<link rel="stylesheet" type="text/css" href="css/tour.css"/>
+	</head>
+	<body>
+		<div class="header">
+			<ul class="head">
+				<li><img id="icon" src="images/5.jpg"/></li>
+				<li><p id="user">李易峰</p></li>
+				<li><img id="music" onclick="playMusic(this)" src="images/musicBtn.png"/></li>
+				<li class="last"><p id="time">00:00:00</p></li>
+			</ul>
+			
+			<!--autoplay="autoplay" :自动播放	
+				controls="controls":显示控制面板
+			loop="loop"：单曲循环-->
+	  <audio src="mp3/HeartbeatSong.mp3"
+	  	 autoplay="autoplay" loop="loop" id="player">
+	  </audio>
+	  
+		</div>
+		
+		<div class="banner">	
+		</div>
+		
+		<div class="send">
+			<form id="formdata" method="post" enctype="multipart/form-data">
+				<textarea id="describe" name="describe" placeholder="吐槽一下"></textarea>
+				<a class="borders1">
+					<span>
+						上传图片
+					</span>
+				<input type="file" name="photo" id="photo"/>
+				</a>
+				
+				<input type="button" onclick="return commitData()" value="发表" />
+				
+				<a class="borders2">
+					<span>
+						上传音乐
+					</span>
+				<input type="file" name="musicfile" id="musicfile"/>
+				</a>
+				
+				<!--<input type="button" value=""/>-->
+			</form>
+		</div>
+		
+		<div class="content">
+			<div id="diary">
+				<div class="imgbox">
+					
+				<div class="imgbox-left">
+				<img class="images" src="images/6.jpg"/>
+				</div>
+				
+				<div class="imgbox-right">
+					<a class="delete" href="#">删除</a>
+					<p class="descript">刚好遇见你</p>
+					<div class="iconbox">
+						<img src="images/5.jpg"/>
+						<span class="users">
+							李易峰
+						</span>
+						<span class="times">
+							发表时间
+						</span>
+					</div>
+					
+					<div class="share">
+						<span class="sharemusic">
+							分享音乐：刚好遇见你
+						</span>
+						<a class="downloads" href="#">下载</a>
+					</div>
+					
+				</div>
+				
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="js/jquery-2.1.0.js">
+		</script>
+		<script type="text/javascript" src="js/time.js">
+		</script>
+		<script type="text/javascript" src="js/main.js">
+		</script>
+		<script type="text/javascript" src="js/createbox.js">
+		</script>
+	</body>
+</html>
